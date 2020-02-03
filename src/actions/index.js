@@ -6,15 +6,15 @@ import {
     NO_NEWS_TO_FETCH
 } from './../constants/actionTypes';
 import {
-    newsApiKeyQuery,
-    pagesPerPageQuery,
-    countryQuery
+    NEWS_API_KEY,
+    PAGE_SIZE,
+    COUNTRY_QUERY
 } from '../constants/apiValues';
 
 export const getNewsList = () => {
     return (dispatch, getState) => {
         const pageNumber = getState().pageCount;
-        const newsApiRequestUrl = `https://newsapi.org/v2/top-headlines?${countryQuery}&${pagesPerPageQuery}&${newsApiKeyQuery}&page=${pageNumber}`;
+        const newsApiRequestUrl = `https://newsapi.org/v2/top-headlines?${COUNTRY_QUERY}&${PAGE_SIZE}&${NEWS_API_KEY}&page=${pageNumber}`;
         return axios.get(newsApiRequestUrl).then(response => {
             if (!response.data.articles.length) {
                 dispatch({
