@@ -1,0 +1,19 @@
+.newsSidebar {
+    padding: 5px;
+    box-sizing: border-box;
+    width: 225px;
+    min-width: 225px;
+    max-width: 225px;
+    height: 100%;
+}
+
+.btnContainer{
+    box-shadow: 0px -7px 12px -5px rgba(165, 163, 175, 0.7);
+    padding: 8px;
+    box-sizing: border-box;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

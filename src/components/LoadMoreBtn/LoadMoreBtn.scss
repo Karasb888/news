@@ -1,0 +1,23 @@
+.loadMoreBtn {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #151716;
+    text-transform: uppercase;
+    background: #ffffff;
+    border: 1px solid #8d62bd;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    letter-spacing: -0.5px;
+    font-family: Arial;
+
+    &:hover{
+        border-radius: 50px;
+        transition: all 0.3s ease 0s;
+        color: #8d62bd;
+    }
+}
