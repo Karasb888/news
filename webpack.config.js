@@ -10,7 +10,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist/'),
-        publicPath: '/dist/'
+        publicPath: '/news/dist/'
     },
     module: {
         rules: [
@@ -58,7 +58,7 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[ext]',
+                        name: 'img/[name].[ext]',
                     }
                 }
             }
