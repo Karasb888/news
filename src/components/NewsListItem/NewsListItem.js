@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import styles from './NewsListItem.scss';
 // actions
 import { setActiveNewsListItem } from './../../actions/index';
+// images
+import noImage from './../../img/no-image.png';
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -19,7 +21,7 @@ const NewsListItem = ({ news, setCurrentItem }) => {
             <div className={styles.newsImageContainer}>
                 <img
                     className={styles.newsImageSmall}
-                    src={news.urlToImage} 
+                    src={news.urlToImage || noImage} 
                 />
             </div>
             <a

@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 // styles
 import styles from './NewsListItemPreview.scss';
+// images
+import noImage from './../../img/no-image.png';
 
 const mapStateToProps = (state) => {
     return {
@@ -14,7 +16,7 @@ const mapStateToProps = (state) => {
 const NewsListItemPreview = ({ newsItem }) => {
     return (
         <div className={styles.container}>
-            <img className={styles.preview} src={newsItem.urlToImage} />
+            <img className={styles.preview} src={newsItem.urlToImage || noImage} />
             <a href={newsItem.url} className={styles.title}>{newsItem.title}</a>
         </div>
     );

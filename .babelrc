@@ -1,0 +1,15 @@
+{
+    "ignore": [],
+    "env": {
+      "testing": {
+        "presets": ["@babel/preset-env", "@babel/preset-react"],
+        "plugins": ["@babel/plugin-transform-modules-commonjs", "dynamic-import-node"]
+      },
+      "production": {
+        "presets": ["@babel/preset-env", "@babel/preset-react"]
+      },
+      "development": {
+        "presets": ["@babel/preset-env", "@babel/preset-react"]
+      }
+    }
+  }

@@ -3,14 +3,17 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
+const publicPath = process.env.NODE_ENV === 'production' ? '/news/dist/' : '/dist/';
+
 module.exports = {
+    mode: process.env.NODE_ENV,
     entry: {
         app: './src/index.js'
     },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist/'),
-        publicPath: '/news/dist/'
+        publicPath
     },
     module: {
         rules: [
@@ -18,10 +21,7 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: [ '@babel/preset-react' ]
-                    }
+                    loader: 'babel-loader'
                 }
             },
             {
